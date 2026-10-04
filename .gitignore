@@ -1,0 +1,33 @@
+# (In .gitignore, comments must be on their own line: a "#" after a pattern is part of it.)
+
+# ---- Reinstallable: restore after cloning ----
+# cd scene-drawer && npm install
+node_modules/
+# cd object-server && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/
+__pycache__/
+*.pyc
+
+# ---- Generated ----
+# npm run build
+dist/
+dist-ssr/
+# Vite's cache
+.vite/
+*.log
+*.tsbuildinfo
+
+# ---- Secrets and local settings, in case they ever appear ----
+.env
+.env.local
+.env.*.local
+*.pem
+id_rsa*
+id_ed25519*
+
+# ---- Editors and operating systems ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.sw?

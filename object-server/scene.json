@@ -1,0 +1,9 @@
+{
+  "objects": [
+    {"id": "cube",      "object": "cube",      "transform": {"translation": [-3.0, 1.3, 0], "rotation": [25, 35, 0], "scale": [1.2, 1.2, 1.2]}},
+    {"id": "pyramid",   "object": "pyramid",   "transform": {"translation": [0, 0.7, 0],    "rotation": [15, 30, 0], "scale": [1.4, 1.4, 1.4]}},
+    {"id": "triangle",  "object": "triangle",  "transform": {"translation": [3.0, 1.3, 0],  "rotation": [0, -25, 0]}},
+    {"id": "sphere",    "object": "sphere",    "transform": {"translation": [-1.7, -1.6, 0], "rotation": [20, 0, 0]}},
+    {"id": "rectangle", "object": "rectangle", "transform": {"translation": [1.9, -1.6, 0],  "rotation": [0, 30, 0], "scale": [1.5, 1.5, 1.5]}}
+  ]
+}

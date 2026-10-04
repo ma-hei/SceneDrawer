@@ -1,0 +1,26 @@
+{
+  "description": "A rectangle outline in the upper left: 4 corners joined by 4 lines (no surface).",
+  "mesh": {
+    "primitive": "lines",
+    "positions": [
+      -0.6, -0.4, 0,
+      0.6, -0.4, 0,
+      0.6, 0.4, 0,
+      -0.6, 0.4, 0
+    ],
+    "colors": [
+      0.95, 0.95, 0.95,
+      0.95, 0.95, 0.95,
+      0.95, 0.95, 0.95,
+      0.95, 0.95, 0.95
+    ],
+    "indices": [
+      0, 1,
+      1, 2,
+      2, 3,
+      3, 0
+    ]
+  },
+  "transform": {"translation": [-3.4, 2.7, 0], "rotation": [0, 0, 0], "scale": [1, 1, 1]},
+  "motion": {"type": "static"}
+}

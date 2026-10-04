@@ -1,0 +1,10 @@
+/* The scene fills the whole window: no default margins, and the scene's dark background
+   behind it (also visible for a moment before WebGL draws the first frame). */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0f0f14;
+}
