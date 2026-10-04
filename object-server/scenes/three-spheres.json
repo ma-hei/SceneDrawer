@@ -1,0 +1,7 @@
+{
+  "objects": [
+    {"id": "sphere-left",   "object": "sphere", "transform": {"translation": [-3.2, 0, 0], "rotation": [25, 0, 0],    "scale": [1.2, 1.2, 1.2]}},
+    {"id": "sphere-middle", "object": "sphere", "transform": {"translation": [0, 0, 0],    "rotation": [0, 0, 0],     "scale": [1.2, 1.2, 1.2]}},
+    {"id": "sphere-right",  "object": "sphere", "transform": {"translation": [3.2, 0, 0],  "rotation": [-25, 30, 20], "scale": [1.2, 1.2, 1.2]}}
+  ]
+}
