@@ -1,5 +1,7 @@
 # Scene Drawer
 
+![Scene Drawer: one wireframe sphere from the object server, drawn three times with different rotations](docs/screenshot.png)
+
 **Scene Drawer draws a 3D scene in the browser whose objects come from a server.** The browser knows how to draw; the server decides *what* is drawn and *where*. Add an object file on the server, and every open page shows it within two seconds, without a reload.
 
 The scene in the browser is a WebGL2 renderer in React. The **object server** is a small Python (FastAPI) service that hands out objects: their mesh (the corners and how they're connected), their placement (position, rotation, size), and how they move.
@@ -140,6 +142,12 @@ The authoritative definition is the Pydantic models in [server.py](object-server
 - **An instance** (`id`, `object`, `transform`) places an object with its own id. Its `transform` replaces only the parts it lists; the rest comes from the object file. One object can appear any number of times, as long as every id is unique.
 - **Without `scene.json`,** every object file is shown once.
 
+Other scenes can live in their own files; `SCENE_FILE` chooses which one the server uses. The picture at the top of this page is [scenes/three-spheres.json](object-server/scenes/three-spheres.json): one sphere object, placed three times with different rotations.
+
+```bash
+cd object-server && SCENE_FILE=scenes/three-spheres.json .venv/bin/uvicorn server:app --port 8091
+```
+
 The server re-reads `scene.json` and the object files when they change. Edit them while everything runs; the page follows within two seconds.
 
 ## Running it locally
@@ -241,10 +249,12 @@ scene-drawer/                     the renderer (React, Vite, TypeScript, WebGL2)
         └── sceneTypes.ts         the object format, poseAt (motion -> model matrix)
 object-server/                    the object server (Python, FastAPI)
 ├── server.py                     the API, the object format (Pydantic), validation, versions
-├── scene.json                    what the scene shows, and where
+├── scene.json                    what the scene shows, and where (the default scene)
+├── scenes/                       other scenes, chosen with SCENE_FILE
 ├── objects/                      one JSON file per object
 ├── tools/make_sphere.py          generates wireframe spheres
 └── requirements.txt
+docs/screenshot.png               the picture at the top of this README
 ```
 
 ## Roadmap
